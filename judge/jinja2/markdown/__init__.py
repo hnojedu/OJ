@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 import markdown2
 from bleach.sanitizer import Cleaner
 from django.conf import settings
-from jinja2 import Markup
+from markupsafe import Markup
 from lxml import html
 from lxml.etree import ParserError, XMLSyntaxError
 
