@@ -125,7 +125,7 @@
 {% block info_float %}
     {% if request.user.is_authenticated and request.in_contest and submission_limit %}
         {% if submissions_left > 0 %}
-            <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button full">
+            <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button btn btn-primary full">
                 {{ _('Submit solution') }}
             </a>
             <div class="submissions-left">
@@ -140,7 +140,7 @@
             <div class="no-submissions-left submissions-left">{{ _('0 submissions left') }}</div>
         {% endif %}
     {% else %}
-        <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button full">
+        <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button btn btn-primary full">
             {{ _('Submit solution') }}
         </a>
     {% endif %}
@@ -381,7 +381,7 @@
 
 {% block post_description_end %}
     {% if request.user.is_authenticated and not request.profile.mute %}
-        <a href="{{ url('new_problem_ticket', problem.code) }}" class="button clarify">
+        <a href="{{ url('new_problem_ticket', problem.code) }}" class="button btn btn-warning clarify">
             {%- if comment_lock and request.profile.current_contest.live -%}
                 {{ _('Request clarification') }}
             {%- else -%}
