@@ -42,13 +42,13 @@
                 </div>
             {% endif %}
             <table border="0" style="text-align:left">
-                <tr>
+                <tr class="form-outline mb-4">
                     <th><i class="fa fa-user fa-fw"></i>
                     </th>
                     <td>{{ form.username }}
                     </td>
                 </tr>
-                <tr>
+                <tr class="form-outline mb-4">
                     <th><i class="fa fa-key fa-fw"></i>
                     </th>
                     <td>{{ form.password }}
@@ -56,7 +56,7 @@
                 </tr>
             </table>
             <hr>
-            <button style="float:right;" type="submit">{{ _('Login!') }}</button>
+            <button style="float:right;" type="submit" class="btn btn-success">{{ _('Login!')}}</button>
             <input type="hidden" name="next" value="{{ next }}">
         </form>
         <a href="{{ url('password_reset') }}">{{ _('Forgot your password?') }}</a>
