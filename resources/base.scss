@@ -290,7 +290,7 @@ nav {
                 display: inline-table;
 
                 &:link {
-                    color: #FFF;
+                    color: #000;
                 }
 
                 &:hover {
@@ -320,13 +320,13 @@ nav {
                 display: none;
                 color: #000;
                 background: $widget_white;
-                margin: 0 !important;
+                margin: 1 !important;
                 box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-
+                height: 5em;
                 li {
                     a.active {
                         border: none;
-                        border-left: 5px solid $highlight_blue;
+                        border-left: 6px solid $highlight_blue;
                     }
                 }
 
@@ -336,7 +336,7 @@ nav {
                     a, button {
                         padding: 8px 20px 8px 8px !important;
                         font-size: 0.8em;
-                        line-height: 18px;
+                        line-height: 20px;
                         display: block;
                         border-left: 4px solid lightskyblue;
                         white-space: nowrap;
@@ -386,7 +386,6 @@ hr {
 
 #content {
     margin: 52px auto auto;
-
     // Header
     width: 90%;
     height: 100%;
@@ -636,6 +635,8 @@ math {
                     margin: (-13px) -7px;
                     padding: inherit;
                 }
+
+                color: black !important;
             }
 
             ul {
