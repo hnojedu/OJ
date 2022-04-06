@@ -268,6 +268,7 @@ nav {
             text-transform: uppercase;
             position: relative;
             font-family: 'Source Sans Pro', sans-serif;
+            background-color: white;
             &.home-nav-element a {
                 padding: 0;
                 height: 44px;
@@ -286,7 +287,6 @@ nav {
                 vertical-align: middle;
                 color: #000;
                 padding: 14px 7px;
-                height: 20px;
                 display: inline-table;
 
                 &:link {
@@ -320,14 +320,16 @@ nav {
                 display: none;
                 color: #000;
                 background: $widget_white;
-                margin: 1 !important;
+                margin: 0 !important;
                 box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
                 height: 5em;
                 li {
                     a.active {
                         border: none;
                         border-left: 6px solid $highlight_blue;
+                        border-radius: 0 !important;
                     }
+                    box-sizing: content-box !important;
                 }
 
                 li {
@@ -336,7 +338,6 @@ nav {
                     a, button {
                         padding: 8px 20px 8px 8px !important;
                         font-size: 0.8em;
-                        line-height: 20px;
                         display: block;
                         border-left: 4px solid lightskyblue;
                         white-space: nowrap;
