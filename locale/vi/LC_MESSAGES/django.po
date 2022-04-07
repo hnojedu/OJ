@@ -4435,12 +4435,12 @@ msgstr ""
 
 #: templates/base.html:365
 msgid ""
-"follow us on <a style=\"color: #808080\" href=\"https://github.com/hnojedu/OJ">
-<b>Github</b></a> and <a style=\"color: #808080\" href=\"https://"
+"follow us on <a style=\"color: #808080\" href=\"https://github.com/hnojedu/OJ\">"
+"<b>Github</b></a> and <a style=\"color: #808080\" href=\"https://"
 "www.facebook.com/vnoi.wiki\"><b>Facebook</b></a>"
 msgstr ""
-"theo dõi VNOI trên <a style=\"color: #808080\" href=\"https://github.com/hnojedu/OJ">
-<b>Github</b></a>"
+"theo dõi VNOI trên <a style=\"color: #808080\" href=\"https://github.com/hnojedu/OJ\">"
+"<b>Github</b></a>"
 
 #: templates/blog/blog-post.html:12
 #, python-brace-format
