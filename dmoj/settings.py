@@ -201,7 +201,7 @@ DMOJ_USER_DATA_CACHE = ''
 DMOJ_USER_DATA_INTERNAL = ''
 DMOJ_USER_DATA_DOWNLOAD_RATELIMIT = datetime.timedelta(days=1)
 # Whether to allow contest authors to download contest data
-DMOJ_CONTEST_DATA_DOWNLOAD = False
+DMOJ_CONTEST_DATA_DOWNLOAD = True
 DMOJ_CONTEST_DATA_CACHE = ''
 DMOJ_CONTEST_DATA_INTERNAL = ''
 DMOJ_CONTEST_DATA_DOWNLOAD_RATELIMIT = datetime.timedelta(days=1)
