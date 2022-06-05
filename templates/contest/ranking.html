@@ -156,7 +156,9 @@
                         url: '?raw'
                     }).done(function (data) {
                         $('#users-table').html(data);
-                        firstSolve();
+                        for (let callback of window.ranking_updated_callbacks || []) {
+                            callback();
+                        }
                     }).always(function () {
                         ranking_outdated = false;
                         setTimeout(update_ranking, 10000);
@@ -205,10 +207,17 @@
                 localStorage.setItem('show-personal-info', $('.personal-info').is(':visible') ? 'true' : 'false');
             });
 
-            if (localStorage.getItem('show-personal-info') == 'true') {
-                $('.personal-info').show();
-                $('#show-personal-info-checkbox').prop('checked', true);
+            function setupPersonalInfo() {
+                if (localStorage.getItem('show-personal-info') == 'true') {
+                    $('.personal-info').show();
+                    $('#show-personal-info-checkbox').prop('checked', true);
+                }
             }
+            
+            window.ranking_updated_callbacks = window.ranking_updated_callbacks || [];
+            ranking_updated_callbacks.push(setupPersonalInfo);
+            
+            setupPersonalInfo();
 
             var contest_key = '{{contest.key}}';
 
@@ -237,7 +246,7 @@
                 return sub1['time'] < sub2['time'];
             }
 
-            window.firstSolve = function() {
+            function firstSolve() {
                 let firstSolves = {};
 
                 $('td.full-score a').each(function () {
@@ -271,6 +280,8 @@
                 }
             }
 
+            window.ranking_updated_callbacks = window.ranking_updated_callbacks || [];
+            ranking_updated_callbacks.push(firstSolve);
             
             firstSolve();
 
